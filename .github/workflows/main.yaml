@@ -38,19 +38,6 @@ jobs:
        
           go build -o main
 
-      
-
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: artifacts
-          path: main
-
-      - name: Download Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: artifacts
-
       - name: Login to GAR
         uses: docker/login-action@v2
         with:

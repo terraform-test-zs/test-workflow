@@ -10,4 +10,3 @@ RUN chmod 777 /hello
 EXPOSE 8000
 
 CMD ["/hello"]
-a
