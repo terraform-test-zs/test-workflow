@@ -29,7 +29,9 @@ jobs:
 
       - name: Build
         run: |
-          go build -o main // this steps may change based on the Code Language 
+          ls
+          pwd
+          go build -o main main.go // this steps may change based on the Code Language 
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
