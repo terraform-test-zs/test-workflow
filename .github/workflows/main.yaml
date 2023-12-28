@@ -18,7 +18,6 @@ jobs:
   dockerize:
     runs-on: ubuntu-latest
     name: 🐳 Dockerize
-    needs: build
 
     outputs:
       image: ${{ steps.output-image.outputs.image }}
