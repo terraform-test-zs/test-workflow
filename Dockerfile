@@ -4,7 +4,7 @@ RUN apk add --no-cache tzdata ca-certificates
 
 COPY main ./main
 
-RUN chmod 777 /hello
+RUN chmod 777 /main
 
 EXPOSE 8000
 
