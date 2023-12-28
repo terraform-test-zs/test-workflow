@@ -35,9 +35,8 @@ jobs:
 
       - name: Build
         run: |
-          ls
-          pwd
-          go build -o main // this steps may change based on the Code Language 
+       
+          go build -o main
 
       
 
