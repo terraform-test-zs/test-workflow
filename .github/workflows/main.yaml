@@ -29,15 +29,17 @@ jobs:
         with:
           go-version: '1.20'
 
+      - name: Get dependencies
+        run: |
+          go mod download
+
       - name: Build
         run: |
           ls
           pwd
           go build -o main // this steps may change based on the Code Language 
 
-      - name: Get dependencies
-        run: |
-          go mod download
+      
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2

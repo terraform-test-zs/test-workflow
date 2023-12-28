@@ -1,19 +1,15 @@
 package main
 
-import (
-	"developer.zopsmart.com/go/gofr/pkg/gofr"
-
-	orderHandler "inventory/http"
-	orderService "inventory/services/inventory"
-)
+import "gofr.dev/pkg/gofr"
 
 func main() {
+	// initialize gofr object
 	app := gofr.New()
-	app.Server.ValidateHeaders = false
 
-	orderSvc := orderService.New()
-	orderHTTP := orderHandler.New(orderSvc)
+	// register route greet
+	app.GET("/greet", func(ctx *gofr.Context) (interface{}, error) {
+		return "Hello World!", nil
+	})
 
-	app.REST("inventory", orderHTTP)
 	app.Start()
 }
