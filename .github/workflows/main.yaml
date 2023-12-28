@@ -80,7 +80,7 @@ jobs:
         run: gcloud container clusters get-credentials ${{ env.CLUSTER_NAME }}  --region=us-central1 --project=${{ env.CLUSTER_PROJECT }}
 
       - name: Update Deployment Image
-        run: kubectl set image deployment/${{ inputs.APP_NAME }} ${{ inputs.APP_NAME }}=${{ env.image }} --namespace ${{ inputs.NAMESPACE }}
+        run: kubectl set image deployment/${{ inputs.APP_NAME }} ${{ inputs.APP_NAME }}=${{ env.image }} --namespace ${{ env.NAMESPACE }}
 
 
 
